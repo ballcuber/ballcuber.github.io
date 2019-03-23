@@ -3,5 +3,4 @@ layout: home
 ---
 
 
-Hello world !
-Coming soon...
+Hello world ! Coming soon...
