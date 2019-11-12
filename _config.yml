@@ -16,7 +16,7 @@
 title: BallCuber Project
 
 description: >- # this means to ignore newlines until "baseurl:"
-  BallCuber secret project ;)
+  An innovant 4x4x4 Rubik's cube solving machine
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ballcuber.github.io/" # the base hostname & protocol for your site, e.g.
 

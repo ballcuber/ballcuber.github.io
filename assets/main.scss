@@ -20,6 +20,7 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  z-index:-1;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -101,7 +102,6 @@
 
 /* The actual content */
 .content {
-  z-index:-1;
   padding: 20px 30px;
   background-color: Silver ;
   position: relative;
