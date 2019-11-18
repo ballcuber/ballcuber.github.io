@@ -13,9 +13,9 @@ The camera is a low-cost 640x320 Logitech USB webcam, but it's sufficient.
 
 ![Scan tower CAD model](/assets/scan-tower-CAD-model-annotated.png){: .center-image}
 
-![Scan tower photo](/assets/scan-tower-with-cube-photo.jpg){: .center-image}
+![Scan tower photo](/assets/scan-tower-with-cube-photo.png){: .center-image}
 
-![Scan tower photo](/assets/scan-tower-photo.jpg){: .center-image}
+![Scan tower photo](/assets/scan-tower-photo.png){: .center-image}
 
 ![Scan tower photo](/assets/scan-tower-inside-photo.jpg){: .center-image}
 
