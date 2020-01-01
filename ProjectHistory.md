@@ -16,7 +16,7 @@ permalink: /Project-History/
   <div class="container right">
     <div class="content">
       <h2>2010s</h2>
-      <p>The idea still was in my mind but I didn't have the skills to developp it.</p>
+      <p>The idea was still in my mind but I didn't have the skills to developp it.</p>
     </div>
   </div>
   <div class="container left">
@@ -34,7 +34,7 @@ permalink: /Project-History/
   <div class="container left">
     <div class="content">
       <h2>January 2018</h2>
-      <p>I talk about this project to a friend who is mechanical engineer, he presented me OnShape, and we began the mechanical developpement.</p>
+      <p>I talked about this project to a friend who is mechanical engineer, he presented me OnShape, and we began the mechanical developpement.</p>
     </div>
   </div>
   <div class="container right">
@@ -70,7 +70,7 @@ permalink: /Project-History/
   <div class="container left">
     <div class="content">
       <h2>August 2018</h2>
-      <p>Idea of a kinematic based on a maltese cross rather than a gear.</p>
+      <p>Idea of a kinematic based on a geneva drive rather than a gear.</p>
     </div>
   </div>
   <div class="container right">
