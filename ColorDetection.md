@@ -8,7 +8,7 @@ Defining the 96 facets colors is possible by hand in the supervisor, but it is a
 
 ![Manual color definition of the cube](/assets/cube-manual-definition.gif){: .center-image}
 
-That's why we decided to developp an <b>automatic color detection</b> with a camera. First, me want this to be independant of the robot in order not to disturb mechanical tunings. Moreover, image processing is very empirical and dependant of the brightness, so we have created a dark enclosure with controlled lightning and designed so that the camara can scan 3 faces at a time. Then, the cube is flipped in order to scan the 3 other faces.
+That's why we decided to developp an <b>automatic color detection</b> with a camera. First, we want this to be independant of the robot in order not to disturb mechanical tunings. Moreover, image processing is very empirical and dependant of the brightness, so we have created a dark enclosure with controlled lightning and designed so that the camara can scan 3 faces at a time. Then, the cube is flipped in order to scan the 3 other faces.
 The camera is a low-cost 640x320 Logitech USB webcam, but it's sufficient.
 
 ![Scan tower CAD model](/assets/scan-tower-CAD-model-annotated.png){: .center-image}
