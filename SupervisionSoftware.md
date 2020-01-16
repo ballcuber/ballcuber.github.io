@@ -11,3 +11,9 @@ The supervision software allow to :
 - Display a real time 3D view of the cube
 - Supervise ans sequence the resolution steps
 - Debug and monitor the machine
+
+
+
+<video width="100%" autoplay loop muted playsinline>
+  <source src="/assets/IMG_5257.MOV" type="video/mp4" />
+</video>

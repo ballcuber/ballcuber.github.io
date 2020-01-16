@@ -25,17 +25,22 @@ github_username:  BallCuber
 # Build settings
 markdown: kramdown
 
+kramdown:
+  parse_block_html: true
 
 
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - .gitignore
+   - exiftool.exe
+   - LICENSE.txt
+   - README.md
+   - RemoveExif.bat
+   - run.bat
+   - run.command
+

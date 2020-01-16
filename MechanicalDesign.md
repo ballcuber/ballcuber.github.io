@@ -4,6 +4,12 @@ title: Mechanical design
 permalink: /Mechanical-Design/
 ---
 
+<nav>
+  * table of contents
+  {:toc}
+</nav>
+
+
 The mechanical design is the most complicated part of this project.
 
 ## Introduction
@@ -67,3 +73,19 @@ As the Nema 17 motors don't have enough torque, we've added an epicyclic gear to
 # Threaded inserts for plastic
 
 Assembling 3D printed parts has been done using threaded inserts. Those inserts have been pushed in using a soledring iron to heat the insert and melt the plastic around it.
+
+# OnShape
+
+All parts has been designed with [OnShape](https://www.onshape.com/). 
+![OnShape](https://www.onshape.com/hubfs/2017-assets/svg/press_logos/dark_indigo_logos/onshape-logo-dark-indigo.svg)
+
+Onshape is a CAD software with powerful collaboration tools and real-time analytics.
+It is both a desktop and mobile app.
+
+<center>
+	<video width="50%" autoplay loop muted playsinline>
+	  <source src="/assets/onshape-mobile-recording.mp4" type="video/mp4" />
+	</video>
+</center>
+
+

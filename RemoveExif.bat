@@ -1,0 +1,1 @@
+exiftool -overwrite_original_in_place -all= assets/*.*
