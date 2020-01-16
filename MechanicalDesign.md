@@ -54,4 +54,16 @@ We decided to work on the Revenge Cube wich has 4 rows on each direction. To be 
 The Ballcuber has 24 + 24 + 7 = 55 parts between the cube and the frame and we need to be able to reach easily the cube. The frame is the part with all the motors and the hood is the part we remove to reach the cube. We've added magnets on the hood and ferromagnetic parts (simple screws) on the inside parts so that when we remove the hood all the parts that are in the hood stay in it. This is shown in the following picture :
 ![Hood_with_magnets](/assets/kinematic/Magnets.png){: .center-image}
 
-More content is coming soon...
+# Interchangeable motors and embeded 7 pin connector
+
+The motors are connected to the ballcuber using a 7 pin connector. This allows mounting/dismounting og the motors for tunning needs.
+
+# 3D printed epicyclic gear
+
+As the Nema 17 motors don't have enough torque, we've added an epicyclic gear to increase the available torque and as a consequence lower the speed. Below is a cross section of the epiccylic gear train.
+![Hood_with_magnets](/assets/Epicyclic_gear_Xsection.png){: .center-image}
+![KinematicCrossRows](/assets/kinematic/EpicyclicGear.gif){: .center-image}
+
+# Threaded inserts for plastic
+
+Assembling 3D printed parts has been done using threaded inserts. Those inserts have been pushed in using a soledring iron to heat the insert and melt the plastic around it.
