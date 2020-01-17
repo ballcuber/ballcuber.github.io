@@ -4,11 +4,8 @@ title: Mechanical design
 permalink: /Mechanical-Design/
 ---
 
-<nav>
   * table of contents
   {:toc}
-</nav>
-
 
 The mechanical design is the most complicated part of this project.
 

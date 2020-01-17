@@ -27,9 +27,6 @@ github_username:  BallCuber
 # Build settings
 markdown: kramdown
 
-kramdown:
-  parse_block_html: true
-
 
 
 # Exclude from processing.
