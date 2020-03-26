@@ -1,9 +1,9 @@
 
-title: BallCuber
+title: The BallCuber
 description: This machine can solve the 4x4x4 Rubiks's Cube !
-owner: Your Name 
+owner: BallCuber
 first_published: 2020 
-email: your-email@domain.com
+email: 
 baseurl: "" 
 url: "https://ballcuber.github.io"
 social:
