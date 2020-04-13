@@ -6,22 +6,6 @@ permalink: /Color-Detection/
 
 Defining the 96 facets colors is possible by hand in the supervisor, but it is a very <b>laborious</b> task, as you can see :
 
-<!--
-<div class="box alt">
-										<div class="row gtr-50 gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/banner.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt=""></span></div>
-											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt=""></span></div>
-										</div>
-									</div>
--->
 
 <div class="col-12"><span class="image fit"><img src="/assets/cube-manual-definition.gif" alt="Manual color definition of the cube"></span></div>
 
