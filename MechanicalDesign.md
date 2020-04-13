@@ -93,6 +93,12 @@ Assembling 3D printed parts has been done using threaded inserts. Those inserts 
 
 All parts has been designed with [OnShape](https://www.onshape.com/). 
 
+You can have a look on the CAD model here :
+<p> <center><a href="{{ site.onshape }}"><span class="icon fa-external-link"></span>{{ site.onshape }}</a></center></p>
+
+<br/>
+<br/>
+
 <img src="https://www.onshape.com/hubfs/2017-assets/svg/press_logos/dark_indigo_logos/onshape-logo-dark-indigo.svg" class="center-image" width="20%" alt="OnShape" />
 
 
