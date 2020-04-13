@@ -56,4 +56,4 @@ For maintenance and tuning purposes, setting screens allow to adjust the machine
 
 ![3D supervision view](/assets/maintenance-screen1.png){: .center-image}
 
-![3D supervision view](/assets/maintenance-screen1.png){: .center-image}
+![3D supervision view](/assets/maintenance-screen2.png){: .center-image}
