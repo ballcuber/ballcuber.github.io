@@ -54,4 +54,6 @@ The movements resulting from the resolution algorithm are converted into a motor
 # Machine maintenance
 For maintenance and tuning purposes, setting screens allow to adjust the machine (calibration, COM port, camera, ...), as well as to control each motor individually.
 
-![3D supervision view](/assets/maintenance-screen.png){: .center-image}
+![3D supervision view](/assets/maintenance-screen1.png){: .center-image}
+
+![3D supervision view](/assets/maintenance-screen1.png){: .center-image}
