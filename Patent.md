@@ -10,7 +10,7 @@ The invention is protected in France under a Patent registered on April 2019.
 				<div class="box alt">
 					<div class="row uniform 50%">
                 		<div class="4u"><span class="image fit"><img src="/assets/patent/fig1.png" alt="" /></span></div>
-						<div class="4u"><span class="image fit"><img src="/assets/patent/fig2.png" alt="" /></span></div>
+						<div class="8u"><span class="image fit"><img src="/assets/patent/fig2.png" alt="" /></span></div>
 						<div class="4u"><span class="image fit"><img src="/assets/patent/fig3.png" alt="" /></span></div>
 						<div class="4u"><span class="image fit"><img src="/assets/patent/fig4.png" alt="" /></span></div>
 						<div class="4u"><span class="image fit"><img src="/assets/patent/fig5.png" alt="" /></span></div>

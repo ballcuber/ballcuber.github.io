@@ -96,7 +96,6 @@ $baseurl: '{{ site.baseurl }}/assets';
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
 		font-weight: _font(weight-extrabold);
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 1em;
@@ -109,6 +108,7 @@ $baseurl: '{{ site.baseurl }}/assets';
 		}
 	}
 
+	
 	h2 {
 		font-size: 1.35em;
 		line-height: 1.75em;
@@ -1218,6 +1218,11 @@ $baseurl: '{{ site.baseurl }}/assets';
 			}
 
 	}
+	
+	.wrapper h1 {
+		font-size:3em;
+		margin-top:1em;
+	}
 
 	.wrapper {
 		@include padding(6em, 0);
@@ -1832,3 +1837,10 @@ $baseurl: '{{ site.baseurl }}/assets';
 			}
 		}
 	}
+
+.center-image{
+	max-width:100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

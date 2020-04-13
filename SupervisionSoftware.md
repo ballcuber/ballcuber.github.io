@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Supervision software
+title: Supervision Software
 permalink: /Supervision-Software/
 ---
+
 
 The supervision software allow to :
 - Take image from the camera, analyse it and identify the initial state of the cube

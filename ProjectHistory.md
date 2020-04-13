@@ -171,7 +171,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>February 2018</h2>
-      <p>First proof of concept 3D printed prototype with two motors that move the cube with gears (version name : Fetus). We started developping the complete version.</p>
+      <p>First proof of concept 3D printed prototype with two motors that move the cube with gears. We started developping the complete version.</p>
     </div>
   </div>
   <div class="container left">
@@ -183,7 +183,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>May 2018</h2>
-      <p>First entire machine with 9 motors (version name : Obese) and gears. Very disapointed, a lot a mechanical frictions. The servo motors are not reliable to prevent internal pieces from falling when the sphere is opened.</p>
+      <p>First entire machine with 9 motors and gears. Very disapointed, a lot a mechanical frictions. The servo motors are not reliable to prevent internal pieces from falling when the sphere is opened.</p>
     </div>
   </div>
   <div class="container left">
@@ -225,13 +225,13 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container left">
     <div class="content">
       <h2>January 2019</h2>
-      <p>Second entire 3D printed machine with 9 motors and magnets (version name : Elegant).</p>
+      <p>Second entire 3D printed machine with 9 motors and magnets.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>February 2019</h2>
-      <p>Add epicycloidale reducer on all motors (version name : Compact), test of an industrial motor to replace steppers.</p>
+      <p>Add epicycloidale reducer on all motors, test of an industrial motor to replace steppers.</p>
     </div>
   </div>
   <div class="container left">
@@ -243,7 +243,25 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>June 2019</h2>
-      <p>Adding of a shaft encoder, central support, cable guides, new electronic cabinet (version name : not yet defined).</p>
+      <p>Adding of a shaft encoder, central support, cable guides, new electronic cabinet.</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h2>December 2019</h2>
+      <p>New electronic cabinet with subd50 cable.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>January 2020</h2>
+      <p>The patent is officially accepted and will be published.</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h2>March 2020</h2>
+      <p>Ballcuber public release and creation of the website.</p>
     </div>
   </div>
 </div>
