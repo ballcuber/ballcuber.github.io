@@ -4,6 +4,11 @@ title: 3D print
 permalink: /3d-print/
 ---
 
+  * table of contents
+  {:toc}
+
+# Current printed parts
+
 The robot is mainly 3D printed with the following 3D printers :
 - Ultimaker 2
 - Ultimaker 3
@@ -31,6 +36,13 @@ The parts are sliced with Cura from an OnShape STL export.
 		<div class="12u"><span class="image fit"><img src="/assets/ultimaker-cura.PNG" alt="" /></span></div>
 	</div>
 </div>
-				
+
+	
+# Render with transparent hood and base
+
+Here is a render (realised using Blender) of what the ballcuber would look like if we we were able to print it with a transparent material :
+
+![Realistic render](/assets/render.png){: .center-image}	
+
 
 
