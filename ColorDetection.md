@@ -27,7 +27,7 @@ Capture and image processing are done with [OpenCV](https://opencv.org/), and mo
 <center><div class="6u"><span class="image fit"><img src="/assets/opencv-emgucv.png" alt="Scan tower CAD model" /></span></div></center>
 
 
-The image is cuptured, then the perspective of the 3 visible faces is projected so that it is possible to get the color of each 16 facets. This process is repeated after turning the cube to capture the 3 other faces.
+The image is captured, then the perspective of the 3 visible faces is projected so that it is possible to get the color of each 16 facets. This process is repeated after turning the cube to capture the 3 other faces.
 
 <div class="col-12"><span class="image fit"><img src="/assets/image-processing.png" alt="Image processing"></span></div>
 
@@ -39,11 +39,11 @@ Mean RGB color of each facets are prepresented in this 2D scatter plot :
 Here is how to read the color value of a point (A point appears both in RG and RB graph) :
 <div class="col-12"><span class="image fit"><img src="/assets/color-projection.png" alt="Color projection"></span></div>
 
-Color <b>regions are not clearly separated</b>, so we cannot apply a simple threshold on each RGB component to discriminate the real color. We will need a more <b>intelligent algorithm</b>.
+Color <b>regions are not clearly separated</b>, so we cannot apply a simple threshold on each RGB component to discriminate the real color. We will need a <b>smarter algorithm</b>.
 
 The final algorithm works as following :
 * The euclidian color distance between all points is calculated
-* The 2 nearest points are selected and they now belong to the same group (face). A group is composed of 16 points. So, lets find the 14 others than also belong to this group.
+* The 2 nearest points are selected and they now belong to the same group (face). A group is composed of 16 points. So, lets find the 14 others that also belong to this group.
 * All points that still not belong to a group are browsed and the point with the smallest distance to the group now belong to the group.
 * The distance between a point and a group is the smallest distance between this point and all group points.
 * One the group has 16 points, we begin a new group by finding again the 2 nearest points among the remaining points, and calculating the distance between each point and the new group.

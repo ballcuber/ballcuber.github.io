@@ -183,13 +183,13 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>May 2018</h2>
-      <p>First entire machine with 9 motors and gears. Very disapointed, a lot a mechanical frictions. The servo motors are not reliable to prevent internal pieces from falling when the sphere is opened.</p>
+      <p>First entire machine with 9 motors and gears. Very disappointed, a lot of mechanical frictions. The servo motors are not reliable to prevent internal pieces from falling when the sphere is opened.</p>
     </div>
   </div>
   <div class="container left">
     <div class="content">
       <h2>June 2018</h2>
-      <p>Looking for improvements and a more simple kinematic.</p>
+      <p>Looking for improvements and a simpler kinematic.</p>
     </div>
   </div>
   <div class="container right">
@@ -213,7 +213,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container left">
     <div class="content">
       <h2>October 2018</h2>
-      <p>Modification of fetus version with a matlted cross in order to validate it.</p>
+      <p>Modification of fetus version with a geneva drive inspired kinematic in order to validate it.</p>
     </div>
   </div>
   <div class="container right">
@@ -231,13 +231,13 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>February 2019</h2>
-      <p>Add epicycloidale reducer on all motors, test of an industrial motor to replace steppers.</p>
+      <p>Add epicycloidale gear on all motors, test of an industrial motor to replace steppers.</p>
     </div>
   </div>
   <div class="container left">
     <div class="content">
       <h2>April 2019</h2>
-      <p>Redaction and patent application.</p>
+      <p>Writing and patent application.</p>
     </div>
   </div>
   <div class="container right">
