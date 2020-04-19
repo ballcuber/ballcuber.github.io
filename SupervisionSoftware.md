@@ -17,7 +17,7 @@ The software that drives the BallCuber is mainly developed in .NET framework, wi
 Its sources are available on Github : [https://github.com/ballcuber/ballcuber-source-code](https://github.com/ballcuber/ballcuber-source-code).
 
 # Grab images
-[This page](/Color-Detection) describes the procedure to grab and process image in order to get the initial state of the 4x4x4 Rubik's Cube.
+[This page](/color-detection) describes the procedure to grab and process image in order to get the initial state of the 4x4x4 Rubik's Cube.
 
 # Resolution algorithm
 The resolution algorithm is, with the mechanical design, the most difficult part of the project.
