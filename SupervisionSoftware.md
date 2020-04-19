@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Supervision Software
-permalink: /Supervision-Software/
+permalink: /supervision-software/
 ---
 
 <video width="100%" autoplay loop muted playsinline>

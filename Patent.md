@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Patent
-permalink: /Patent/
+permalink: /patent/
 ---
 
 The invention is protected in France under a Patent registered on April 2019.
