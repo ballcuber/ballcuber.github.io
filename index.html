@@ -54,11 +54,13 @@ layout: landing
 </script>
 
 <section id="one" class="special">
-	<ul class="actions fit small" style="width:100%;max-width:1000px;margin:auto;">
-		<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en" class="button special fit disabled" style="padding:0;font-size:0.7em;"><img src="/assets/en.png" style="vertical-align:middle" />English</a></li>
-		<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button special fit" style="padding:0;font-size:0.7em;"><img src="/assets/fr.png" style="vertical-align:middle" />Français</a></li>
-		<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button special fit" style="padding:0;font-size:0.7em;"><img src="/assets/ca.png" style="vertical-align:middle" />Québécois</a></li>
+	<div class="inner" style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
+	<ul class="actions fit small">
+		<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en" class="button special fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/en.png" style="vertical-align:middle" />English</a></li>
+		<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button special fit" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png" style="vertical-align:middle" />Français</a></li>
+		<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button special fit" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png" style="vertical-align:middle" />Québécois</a></li>
 	</ul>
+	</div>
 	<div class="inner">
 		<iframe id="ytplayer" type="text/html"
 			style="width: 100vw;height: 56.25vw;max-height: 80vh; max-width: 177.78vh; margin: auto;background: transparent;"
