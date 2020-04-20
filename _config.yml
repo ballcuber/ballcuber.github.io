@@ -1,6 +1,6 @@
 
 title: The BallCuber
-description: This machine can solve the 4x4x4 Rubiks's Cube !
+description: The BallCuber is a robot able to solve the Revenge Rubik's Cube 4x4x4. It has a patented, fast and innovative mechanics that allows each motor movement to turn a layer. The robot is fully 3D printed. The Rubik's Cube 4x4x4 is located inside a sphere. Intermediate parts are located between the cube and the  mechanism. When a motor rotates, it causes a row of intermediate parts to slide on the inner wall of the sphere, which spreads the movement to a layer of the cube. The robot is controlled by PC-based supervision software as well as embedded software. The electronic cabinet is composed of Arduino boards, stepper motor drivers, motors, magnetic angle encoders and cables. The initial state of the cube is obtained by a separate device equipped with a camera. The supervision software processes the images and an algorithm calculates the movements necessary for the resolution. Once the user puts the Rubik's Cube 4x4x4 into the robot and closes the hood, the cube is manipulated and comes out solved in about 3:20s!
 owner: BallCuber
 first_published: 2020 
 email: 
@@ -8,6 +8,10 @@ baseurl: ""
 url: "https://ballcuber.github.io"
 
 onshape: "https://cad.onshape.com/documents/0cc05df50afa7069d40d5b29/w/4e9a02bde82a52420bb553ee/e/6d739c0ee09a45d88f809d15"
+
+id-video-fr: "0_-C7TjNYqo"
+id-video-en: "0_-C7TjNYqo"
+id-video-ca: "0_-C7TjNYqo"
 
 social:
   #twitter:

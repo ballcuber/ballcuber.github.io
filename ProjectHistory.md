@@ -147,7 +147,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>2010s</h2>
-      <p>The idea was still in my mind but I didn't have the skills to developp it.</p>
+      <p>The idea was still in my mind but I didn't have the skills to develop it.</p>
     </div>
   </div>
   <div class="container left">
@@ -165,13 +165,13 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container left">
     <div class="content">
       <h2>January 2018</h2>
-      <p>I talked about this project to a friend who is mechanical engineer, he presented me OnShape, and we began the mechanical developpement.</p>
+      <p>I talked about this project to a friend who is mechanical engineer, he presented me OnShape, and we began the mechanical development.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>February 2018</h2>
-      <p>First proof of concept 3D printed prototype with two motors that move the cube with gears. We started developping the complete version.</p>
+      <p>First proof of concept 3D printed prototype with two motors that move the cube with gears. We started developing the complete version.</p>
     </div>
   </div>
   <div class="container left">
@@ -195,7 +195,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>July 2018</h2>
-      <p>Developpement of Sharer, an arduino library to facilitate communication with a PC software.</p>
+      <p>Developpement of Sharer, an Arduino library to facilitate communication with a PC software.</p>
     </div>
   </div>
   <div class="container left">
@@ -231,7 +231,7 @@ Long story short, here is a short timeline of all our development steps.
   <div class="container right">
     <div class="content">
       <h2>February 2019</h2>
-      <p>Add epicycloidale gear on all motors, test of an industrial motor to replace steppers.</p>
+      <p>Add epicyclic gearing on all motors, test of an industrial motor to replace steppers.</p>
     </div>
   </div>
   <div class="container left">

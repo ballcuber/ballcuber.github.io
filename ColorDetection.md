@@ -9,7 +9,8 @@ Defining the 96 facets colors is possible by hand in the supervisor, but it is a
 
 <div class="col-12"><span class="image fit"><img src="/assets/cube-manual-definition.gif" alt="Manual color definition of the cube"></span></div>
 
-That's why we decided to developp an <b>automatic color detection</b> with a camera. First, we want this to be independant of the robot in order not to disturb mechanical tunings. Moreover, image processing is very empirical and dependant of the brightness, so we have created a dark enclosure with controlled lightning and designed so that the camara can scan 3 faces at a time. Then, the cube is flipped in order to scan the 3 other faces.
+That's why we decided to develop an <b>automatic color detection</b> with a camera. First, we want this to be independent of the robot in order not to disturb mechanical tunings. Moreover, image processing is very empirical and dependent of the brightness, so we have created a dark enclosure with controlled lightning and designed so that the camera can scan 3 faces at a time. Then, the cube is flipped in order to scan the 3 other faces.
+That's why we decided to develop an <b>automatic color detection</b> with a camera. First, we want this to be independent of the robot in order not to disturb mechanical tunings. Moreover, image processing is very empirical and dependant of the brightness, so we have created a dark enclosure with controlled lightning and designed so that the camera can scan 3 faces at a time. Then, the cube is flipped in order to scan the 3 other faces.
 The camera is a low-cost 640x320 Logitech USB webcam, but it's sufficient.
 
 <div class="box alt">
@@ -31,7 +32,7 @@ The image is captured, then the perspective of the 3 visible faces is projected 
 
 <div class="col-12"><span class="image fit"><img src="/assets/image-processing.png" alt="Image processing"></span></div>
 
-Mean RGB color of each facets are prepresented in this 2D scatter plot :
+Mean RGB color of each facets are presented in this 2D scatter plot :
 
 <div class="col-12"><span class="image fit"><img src="/assets/unclassified-colors.png" alt="Unclassified colors"></span></div>
 
@@ -42,7 +43,7 @@ Here is how to read the color value of a point (A point appears both in RG and R
 Color <b>regions are not clearly separated</b>, so we cannot apply a simple threshold on each RGB component to discriminate the real color. We will need a <b>smarter algorithm</b>.
 
 The final algorithm works as following :
-* The euclidian color distance between all points is calculated
+* The euclidean color distance between all points is calculated
 * The 2 nearest points are selected and they now belong to the same group (face). A group is composed of 16 points. So, lets find the 14 others that also belong to this group.
 * All points that still not belong to a group are browsed and the point with the smallest distance to the group now belong to the group.
 * The distance between a point and a group is the smallest distance between this point and all group points.

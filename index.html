@@ -5,12 +5,9 @@ layout: landing
 <section id="banner">
 	<div class="inner">
 		<h2>{{ site.title }}</h2>
-		<p>{{ site.description | markdownify }}</p>
-		<!--
-							<ul class="actions">
-								<li><a href="#" class="button special">Activate</a></li>
-							</ul>
-							-->
+		<p><b>This machine can solve the 4x4x4 Rubiks’s Cube !</b></p>
+		<p>---</p>
+		<p><i>Ce robot peut résoudre le Rubik's Cube 4x4x4 !</i></p>
 	</div>
 	<a href="#one" class="more scrolly">Learn More</a>
 </section>
@@ -20,53 +17,149 @@ layout: landing
 		let youtubeId;
 		switch (language) {
 			case "fr":
-			youtubeId = "0_-C7TjNYqo";
+				youtubeId = "{{ site.id-video-fr }}";
 				break;
 			case "ca":
-			youtubeId = "0_-C7TjNYqo";
+				youtubeId = "{{ site.id-video-ca }}";
 				break;
 			default:
-			language="en";
-			youtubeId = "0_-C7TjNYqo";
+				language = "en";
+				youtubeId = "{{ site.id-video-en }}";
 		}
 
-		["fr", "en", "ca"].map((curLanguage) =>{
+		["fr", "en", "ca"].map((curLanguage) => {
 			let btn = document.getElementById("btn_" + curLanguage);
 			btn.classList.remove("disabled");
-			if(language == curLanguage)  btn.classList.add("disabled");
+			if (language == curLanguage) btn.classList.add("disabled");
 		});
 
-		document.getElementById("ytplayer").src="https://www.youtube.com/embed/" + youtubeId + "?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0";
+		document.getElementById("ytplayer").src = "https://www.youtube.com/embed/" + youtubeId + "?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0";
 
+		if (language == "en") {
+			document.getElementById("intro_en").style.display = "inline";
+			document.getElementById("intro_fr").style.display = "none";
+		}
+		else {
+			document.getElementById("intro_fr").style.display = "inline";
+			document.getElementById("intro_en").style.display = "none";
+		}
 	}
 
-	document.addEventListener("DOMContentLoaded", ()=>{
-		if(navigator.language){
-			if(navigator.language == "fr-CA") setVideo("ca");
-			else if(navigator.language.startsWith("fr")) setVideo("fr");
+	document.addEventListener("DOMContentLoaded", () => {
+		if (navigator.language) {
+			if (navigator.language == "fr-CA") setVideo("ca");
+			else if (navigator.language.startsWith("fr")) setVideo("fr");
 			else setVideo("en");
 		}
-		else{
+		else {
 			setVideo("en");
+		}
+
+		const a = document.createElement("a");
+		if (!a.relList.supports("ar")) { // AR is not available.
+			document.getElementById("ar-link").style.display = "none";
 		}
 	});
 
 </script>
 
 <section id="one" class="special">
-	<div class="inner" style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
-	<ul class="actions fit small">
-		<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en" class="button special fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/en.png" style="vertical-align:middle" />English</a></li>
-		<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button special fit" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png" style="vertical-align:middle" />Français</a></li>
-		<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button special fit" style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png" style="vertical-align:middle" />Québécois</a></li>
-	</ul>
-	</div>
-	<div class="inner">
+	<div class="wrapper style1" style="padding:0">
+
+		<div style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
+			<ul class="actions fit small">
+				<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en"
+						class="button special fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img
+							src="/assets/en.png" style="vertical-align:middle" />English</a></li>
+				<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button special fit"
+						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png"
+							style="vertical-align:middle" />Français</a></li>
+				<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button special fit"
+						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png"
+							style="vertical-align:middle" />Québécois</a></li>
+			</ul>
+		</div>
+
 		<iframe id="ytplayer" type="text/html"
 			style="width: 100vw;height: 56.25vw;max-height: 80vh; max-width: 177.78vh; margin: auto;background: transparent;"
-			src="https://www.youtube.com/embed/0_-C7TjNYqo?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0"
+			src="https://www.youtube.com/embed/{{ site.id-video-en }}?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0"
 			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen><img src="/assets/ballcuber-overview.png" style="width: 100%;height:56vw" /></iframe>
+			allowfullscreen><img src="/assets/ballcuber-overview.png" />
+		</iframe>
+
+		{% include 3dModel.html %}
+
+		<div style="text-align: justify;width: 100vw;max-width: 177.78vh;margin:auto;">
+			<p>
+				<span style="display: none" id="intro_fr">
+					Le <b>BallCuber</b> est un robot capable de résoudre le Revenge Rubik's Cube de taille 4x4x4.<br />
+					Il dispose d'une mécanique brevetée, rapide et innovante qui permet à chaque mouvement de moteur de
+					tourner
+					une couche. Le robot est entièrement imprimé en 3D.<br />
+					Le Rubik's Cube 4x4x4 est situé à l'intérieur d'une sphère (d'où le nom BallCuber ;) ). Des pièces
+					intermédiaires sont situées entre le cube et la sphère. Des moteurs pas-à-pas animent la machine via
+					un
+					réducteur et un mécanisme à croix de malte. Lorsqu'un moteur tourne, il entraine le glissement d'une
+					rangée
+					de pièces intermédiaires sur la paroi intérieur de la sphère, ce qui propage le mouvement à une
+					couronne
+					du
+					cube.<br />
+					Un logiciel de supervision sur PC ainsi qu'un logiciel embarqué permettent de piloter le robot. Le
+					coffret
+					électronique est composé de cartes Arduino, de driver de moteur pas-à-pas, de moteurs, de codeurs
+					d'angles
+					magnétiques et de beaucoup de câbles.<br />
+					L'état initial du cube est obtenu par un dispositif à part muni d'une caméra. Le logiciel de
+					supervision
+					traite les images et un algorithme calcule les mouvements nécessaires à la résolution. Une fois que
+					l'utilisateur dépose le Rubik's Cube 4x4x4 dans le robot et ferme le capot, le cube est manipulé et
+					ressort
+					résolu en environ 3:20s !<br />
+					Dans une prochaine version, nous espérons disposer de 9 moteurs brushless ainsi que d'une mécanique
+					plus
+					précise pour battre le record du monde qui est de 1:18s.<br />
+					Soyez libre de parcourir le site web ou de nous contacter pour plus d'information.
+				</span>
+				<span id="intro_en">
+					The <b>BallCuber</b> is a robot able to solve the Revenge Rubik's Cube 4x4x4.<br />
+					It has a patented, fast and innovative mechanics that allows each motor movement to turn a layer.
+					The
+					robot
+					is fully 3D printed.<br />
+					The Rubik's Cube 4x4x4 is located inside a sphere (hence the name BallCuber ;) ). Intermediate parts
+					are
+					located between the cube and the sphere. Stepper motors animate the machine via a gearbox and a
+					geneva
+					drive
+					mechanism. When a motor rotates, it causes a row of intermediate parts to slide on the inner wall of
+					the
+					sphere, which spreads the movement to a layer of the cube.<br />
+					The robot is controlled by PC-based supervision software as well as embedded software. The
+					electronic
+					cabinet is composed of Arduino boards, stepper motor drivers, motors, magnetic angle encoders and a
+					lot
+					of
+					cables.<br />
+					The initial state of the cube is obtained by a separate device equipped with a camera. The
+					supervision
+					software processes the images and an algorithm calculates the movements necessary for the
+					resolution.
+					Once
+					the user puts the Rubik's Cube 4x4x4 into the robot and closes the hood, the cube is manipulated and
+					comes
+					out solved in about 3:20s!<br />
+					In a future version, we hope to have 9 brushless motors as well as more precise mechanics to beat
+					the
+					world
+					record which is 1:18s.<br />
+					Feel free to browse the website or contact us for more information.
+				</span>
+			</p>
+			<p>
+				<center>---</center>
+			</p>
+		</div>
 	</div>
 </section>
 
@@ -125,6 +218,8 @@ layout: landing
 				<li>Runner that sequences the resolution</li>
 				<li>Sharer.NET to communicate with Arduino boards</li>
 			</ul>
+			<p><a href="https://github.com/ballcuber/ballcuber-source-code" target="_blank"><span
+						class="icon fa-github"></span>Sources on GitHub</a></p>
 			<p><a href="/supervision-software">Read more...</a></p>
 		</div>
 	</section>
@@ -145,16 +240,6 @@ layout: landing
 			<p><a href="/3d-print/">Read more...</a></p>
 		</div>
 	</section>
-	<section class="spotlight">
-		<div class="image"><img src="/assets/onshape-screenshot.png" alt="" /></div>
-		<div class="content">
-			<h2>CAD Model</h2>
-			<p>The entire machine has been designed with OnShape</p>
-			<p><a href="/mechanical-design/#onshape">Read more...</a></p>
-			<p><a href="{{ site.onshape }}" target="_blank"><span class="icon fa-external-link"></span>See CAD model on
-					OnShape website</a></p>
-		</div>
-	</section>
 </section>
 
 <!-- Three -->
@@ -169,7 +254,7 @@ layout: landing
 				00:03:20s</p>
 			<p>Here is what we need to improve it :</p>
 		</header>
-		<ul class="features">
+		<ul class="features" style="margin:0">
 			<li class="icon fa-cubes">
 				<h3>More accurate 3D printing</h3>
 				<p>Our current prototype has too much cutting clearance which sometimes causes collision. For next
@@ -196,3 +281,31 @@ layout: landing
 		</ul>
 	</div>
 </section>
+
+<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+<script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+
+<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+<!-- 💁 Include both scripts below to support all browsers! -->
+
+<!-- Loads <model-viewer> for modern browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer-legacy.js">
+</script>

@@ -12,7 +12,7 @@ permalink: /supervision-software/
 {:toc}
 
 # Introduction
-The software that drives the BallCuber is mainly developed in .NET framework, with some aditional javascript and java. But a part also runs in each of the two Arduino MEGA boards (C++ language).
+The software that drives the BallCuber is mainly developed in .NET framework, with some additional javascript and java. But a part also runs in each of the two Arduino MEGA boards (C++ language).
 
 Its sources are available on Github : [https://github.com/ballcuber/ballcuber-source-code](https://github.com/ballcuber/ballcuber-source-code).
 
@@ -27,7 +27,7 @@ Fortunately, the Github user cs0x7f has published a TPR-4x4x4-Solver that is bas
 
 The Ballcuber .NET software call the java solver and parse its output to identify the solving sequence. Then, geometric transformations are applied to make its movements compatible with the kinematics of the BallCuber, which has a fixed corner. 
 
-On average, this algortithm solves the cube in about 60 moves (quarter turns).
+On average, this algorithm solves the cube in about 60 moves (quarter turns).
 
 
 # 3D real time display
@@ -42,7 +42,7 @@ The embedded part has been designed to be simple and slave to the .NET program. 
 * Sharer : [https://github.com/Rufus31415/Sharer](https://github.com/Rufus31415/Sharer) 
 * Stepper : [https://www.airspayce.com/mikem/arduino/AccelStepper/](https://www.airspayce.com/mikem/arduino/AccelStepper/) 
 
-BallCuber embeded sources are available on Github : [https://github.com/ballcuber/ballcuber-source-code/blob/master/Arduino/Arduino.ino](https://github.com/ballcuber/ballcuber-source-code/blob/master/Arduino/Arduino.ino).
+BallCuber embedded sources are available on Github : [https://github.com/ballcuber/ballcuber-source-code/blob/master/Arduino/Arduino.ino](https://github.com/ballcuber/ballcuber-source-code/blob/master/Arduino/Arduino.ino).
 
 
 # Resolution sequences
