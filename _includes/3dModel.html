@@ -2,5 +2,34 @@
 	ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
 	alt="A 3D model of the BallCuber" shadow-intensity="1" camera-controls interaction-prompt="auto"
 	interaction-prompt-threshold="100" auto-rotate ar magic-leap
-	style="width: 100vw;height: 50vw;max-height: 80vh; max-width: 80vh;background-color: transparent;margin:20px auto 20px auto;">
+	style="width: 100vw;height: 50vw;max-height: 80vh; max-width: 80vh;background-color: transparent;margin:0 auto 10px auto;">
 </model-viewer>
+
+
+<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+<script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+
+<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+<!-- 💁 Include both scripts below to support all browsers! -->
+
+<!-- Loads <model-viewer> for modern browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer-legacy.js">
+</script>

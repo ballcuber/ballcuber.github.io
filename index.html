@@ -76,7 +76,7 @@ layout: landing
 		</div>
 
 		<iframe id="ytplayer" type="text/html"
-			style="width: 100vw;height: 56.25vw;max-height: 80vh; max-width: 177.78vh; margin: auto;background: transparent;"
+			style="width: 100vw;height: 56.25vw;max-height: 80vh;max-width: 142vh;margin: auto;background: transparent;"
 			src="https://www.youtube.com/embed/{{ site.id-video-en }}?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0"
 			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen><img src="/assets/ballcuber-overview.png" />
@@ -276,31 +276,3 @@ layout: landing
 		</ul>
 	</div>
 </section>
-
-<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
-
-<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-
-<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
-
-<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
-
-<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
-<script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
-
-<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-
-<!-- 💁 Include both scripts below to support all browsers! -->
-
-<!-- Loads <model-viewer> for modern browsers: -->
-<script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js">
-</script>
-
-<!-- Loads <model-viewer> for old browsers like IE11: -->
-<script nomodule src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer-legacy.js">
-</script>
