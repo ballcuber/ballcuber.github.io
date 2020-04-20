@@ -5,7 +5,7 @@ layout: landing
 <section id="banner">
 	<div class="inner">
 		<h2>{{ site.title }}</h2>
-		<p><b>This machine can solve the 4x4x4 Rubiks’s Cube !</b></p>
+		<p><b>This machine can solve the 4x4x4 Rubik’s Cube !</b></p>
 		<p>---</p>
 		<p><i>Ce robot peut résoudre le Rubik's Cube 4x4x4 !</i></p>
 	</div>
@@ -59,22 +59,7 @@ layout: landing
 </script>
 
 <section id="one" class="special">
-	<div class="wrapper style1" style="padding:0">
-
-		<div style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
-			<ul class="actions fit small">
-				<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en"
-						class="button special fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img
-							src="/assets/en.png" style="vertical-align:middle" />English</a></li>
-				<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button special fit"
-						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png"
-							style="vertical-align:middle" />Français</a></li>
-				<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button special fit"
-						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png"
-							style="vertical-align:middle" />Québécois</a></li>
-			</ul>
-		</div>
-
+	<div class="wrapper style1" style="padding:20px 0 0 0">
 		<iframe id="ytplayer" type="text/html"
 			style="width: 100vw;height: 56.25vw;max-height: 80vh;max-width: 142vh;margin: auto;background: transparent;"
 			src="https://www.youtube.com/embed/{{ site.id-video-en }}?cc_load_policy=1&modestbranding=1&rel=0&autoplay=0"
@@ -83,6 +68,20 @@ layout: landing
 		</iframe>
 
 		{% include 3dModel.html %}
+
+		<div style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
+			<ul class="actions fit small">
+				<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en"
+						class="button fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img
+							src="/assets/en.png" style="vertical-align:middle" />English</a></li>
+				<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button fit"
+						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png"
+							style="vertical-align:middle" />Français</a></li>
+				<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button fit"
+						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png"
+							style="vertical-align:middle" />Québécois</a></li>
+			</ul>
+		</div>
 
 		<div style="text-align: justify;width: 100vw;max-width: 177.78vh;margin:auto;">
 			<p>
