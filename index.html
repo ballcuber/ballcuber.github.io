@@ -12,6 +12,7 @@ layout: landing
 	<a href="#one" class="more scrolly">Learn More</a>
 </section>
 
+<script src="/js/jquery.min.js"></script>
 <script>
 	function setVideo(language) {
 		let youtubeId;
@@ -38,10 +39,12 @@ layout: landing
 		if (language == "en") {
 			document.getElementById("intro_en").style.display = "inline";
 			document.getElementById("intro_fr").style.display = "none";
+			document.getElementById("txt-read-more").innerText = "Lire d'avantage...";
 		}
 		else {
 			document.getElementById("intro_fr").style.display = "inline";
 			document.getElementById("intro_en").style.display = "none";
+			document.getElementById("txt-read-more").innerText = "Read more...";
 		}
 	}
 
@@ -54,6 +57,40 @@ layout: landing
 		else {
 			setVideo("en");
 		}
+
+	var $el, $ps, $up, totalHeight;
+
+	$("#btn-read-more").click(function () {
+
+		totalHeight = 0
+
+		$el = $(this);
+		$p = $el.parent();
+		$up = $p.parent();
+		$ps = $up.find("p:not('.read-more')");
+
+		// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+		$ps.each(function () {
+			totalHeight += $(this).outerHeight();
+		});
+
+		$up
+			.css({
+				// Set height to prevent instant jumpdown when max height is removed
+				"height": $up.height(),
+				"max-height": 9999
+			})
+			.animate({
+				"height": totalHeight
+			});
+
+		// fade out read-more
+		$p.fadeOut();
+
+		// prevent jump-down
+		return false;
+
+	});
 	});
 
 </script>
@@ -66,94 +103,109 @@ layout: landing
 			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen><img src="/assets/ballcuber-overview.png" />
 		</iframe>
-
-		{% include 3dModel.html %}
-
 		<div style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
 			<ul class="actions fit small">
-				<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en"
-						class="button fit disabled" style="padding:0;font-size:0.7em;text-overflow:clip;"><img
-							src="/assets/en.png" style="vertical-align:middle" />English</a></li>
+				<li><a href="javascript:void(0)" onclick="setVideo('en');" id="btn_en" class="button fit disabled"
+						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/en.png"
+							style="vertical-align:middle;opacity:0.5;" />English</a></li>
 				<li><a href="javascript:void(0)" onclick="setVideo('fr');" id="btn_fr" class="button fit"
 						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/fr.png"
-							style="vertical-align:middle" />Français</a></li>
+							style="vertical-align:middle;opacity:0.5;" />Français</a></li>
 				<li><a href="javascript:void(0)" onclick="setVideo('ca');" id="btn_ca" class="button fit"
 						style="padding:0;font-size:0.7em;text-overflow:clip;"><img src="/assets/ca.png"
-							style="vertical-align:middle" />Québécois</a></li>
+							style="vertical-align:middle;opacity:0.5;" />Québécois</a></li>
 			</ul>
 		</div>
 
-		<div style="text-align: justify;width: 100vw;max-width: 177.78vh;margin:auto;">
-			<p>
-				<span style="display: none" id="intro_fr">
-					Le <b>BallCuber</b> est un robot capable de résoudre le Revenge Rubik's Cube de taille 4x4x4.<br />
-					Il dispose d'une mécanique brevetée, rapide et innovante qui permet à chaque mouvement de moteur de
-					tourner
-					une couche. Le robot est entièrement imprimé en 3D.<br />
-					Le Rubik's Cube 4x4x4 est situé à l'intérieur d'une sphère (d'où le nom BallCuber ;) ). Des pièces
-					intermédiaires sont situées entre le cube et la sphère. Des moteurs pas-à-pas animent la machine via
-					un
-					réducteur et un mécanisme à croix de malte. Lorsqu'un moteur tourne, il entraine le glissement d'une
-					rangée
-					de pièces intermédiaires sur la paroi intérieur de la sphère, ce qui propage le mouvement à une
-					couronne
-					du
-					cube.<br />
-					Un logiciel de supervision sur PC ainsi qu'un logiciel embarqué permettent de piloter le robot. Le
-					coffret
-					électronique est composé de cartes Arduino, de driver de moteur pas-à-pas, de moteurs, de codeurs
-					d'angles
-					magnétiques et de beaucoup de câbles.<br />
-					L'état initial du cube est obtenu par un dispositif à part muni d'une caméra. Le logiciel de
-					supervision
-					traite les images et un algorithme calcule les mouvements nécessaires à la résolution. Une fois que
-					l'utilisateur dépose le Rubik's Cube 4x4x4 dans le robot et ferme le capot, le cube est manipulé et
-					ressort
-					résolu en environ 3:20s !<br />
-					Dans une prochaine version, nous espérons disposer de 9 moteurs brushless ainsi que d'une mécanique
-					plus
-					précise pour battre le record du monde qui est de 1:18s.<br />
-					Soyez libre de parcourir le site web ou de nous contacter pour plus d'information.
-				</span>
-				<span id="intro_en">
-					The <b>BallCuber</b> is a robot able to solve the Revenge Rubik's Cube 4x4x4.<br />
-					It has a patented, fast and innovative mechanics that allows each motor movement to turn a layer.
-					The
-					robot
-					is fully 3D printed.<br />
-					The Rubik's Cube 4x4x4 is located inside a sphere (hence the name BallCuber ;) ). Intermediate parts
-					are
-					located between the cube and the sphere. Stepper motors animate the machine via a gearbox and a
-					geneva
-					drive
-					mechanism. When a motor rotates, it causes a row of intermediate parts to slide on the inner wall of
-					the
-					sphere, which spreads the movement to a layer of the cube.<br />
-					The robot is controlled by PC-based supervision software as well as embedded software. The
-					electronic
-					cabinet is composed of Arduino boards, stepper motor drivers, motors, magnetic angle encoders and a
-					lot
-					of
-					cables.<br />
-					The initial state of the cube is obtained by a separate device equipped with a camera. The
-					supervision
-					software processes the images and an algorithm calculates the movements necessary for the
-					resolution.
-					Once
-					the user puts the Rubik's Cube 4x4x4 into the robot and closes the hood, the cube is manipulated and
-					comes
-					out solved in about 3:20s!<br />
-					In a future version, we hope to have 9 brushless motors as well as more precise mechanics to beat
-					the
-					world
-					record which is 1:18s.<br />
-					Feel free to browse the website or contact us for more information.
-				</span>
-			</p>
-			<p>
-				<center>---</center>
-			</p>
+		<div class="sidebar-box">
+			<div style="text-align: justify;width: 100vw;max-width: 177.78vh;margin:auto;">
+				<p>
+					<span style="display: none" id="intro_fr">
+						Le <b>BallCuber</b> est un robot capable de résoudre le Revenge Rubik's Cube de taille
+						4x4x4.<br />
+						Il dispose d'une mécanique brevetée, rapide et innovante qui permet à chaque mouvement de moteur
+						de
+						tourner
+						une couche. Le robot est entièrement imprimé en 3D.<br />
+						Le Rubik's Cube 4x4x4 est situé à l'intérieur d'une sphère (d'où le nom BallCuber ;) ). Des
+						pièces
+						intermédiaires sont situées entre le cube et la sphère. Des moteurs pas-à-pas animent la machine
+						via
+						un
+						réducteur et un mécanisme à croix de malte. Lorsqu'un moteur tourne, il entraine le glissement
+						d'une
+						rangée
+						de pièces intermédiaires sur la paroi intérieur de la sphère, ce qui propage le mouvement à une
+						couronne
+						du
+						cube.<br />
+						Un logiciel de supervision sur PC ainsi qu'un logiciel embarqué permettent de piloter le robot.
+						Le
+						coffret
+						électronique est composé de cartes Arduino, de driver de moteur pas-à-pas, de moteurs, de
+						codeurs
+						d'angles
+						magnétiques et de beaucoup de câbles.<br />
+						L'état initial du cube est obtenu par un dispositif à part muni d'une caméra. Le logiciel de
+						supervision
+						traite les images et un algorithme calcule les mouvements nécessaires à la résolution. Une fois
+						que
+						l'utilisateur dépose le Rubik's Cube 4x4x4 dans le robot et ferme le capot, le cube est manipulé
+						et
+						ressort
+						résolu en environ 3:20s !<br />
+						Dans une prochaine version, nous espérons disposer de 9 moteurs brushless ainsi que d'une
+						mécanique
+						plus
+						précise pour battre le record du monde qui est de 1:18s.<br />
+						Soyez libre de parcourir le site web ou de nous contacter pour plus d'information.
+					</span>
+					<span id="intro_en">
+						The <b>BallCuber</b> is a robot able to solve the Revenge Rubik's Cube 4x4x4.<br />
+						It has a patented, fast and innovative mechanics that allows each motor movement to turn a
+						layer.
+						The
+						robot
+						is fully 3D printed.<br />
+						The Rubik's Cube 4x4x4 is located inside a sphere (hence the name BallCuber ;) ). Intermediate
+						parts
+						are
+						located between the cube and the sphere. Stepper motors animate the machine via a gearbox and a
+						geneva
+						drive
+						mechanism. When a motor rotates, it causes a row of intermediate parts to slide on the inner
+						wall of
+						the
+						sphere, which spreads the movement to a layer of the cube.<br />
+						The robot is controlled by PC-based supervision software as well as embedded software. The
+						electronic
+						cabinet is composed of Arduino boards, stepper motor drivers, motors, magnetic angle encoders
+						and a
+						lot
+						of
+						cables.<br />
+						The initial state of the cube is obtained by a separate device equipped with a camera. The
+						supervision
+						software processes the images and an algorithm calculates the movements necessary for the
+						resolution.
+						Once
+						the user puts the Rubik's Cube 4x4x4 into the robot and closes the hood, the cube is manipulated
+						and
+						comes
+						out solved in about 3:20s!<br />
+						In a future version, we hope to have 9 brushless motors as well as more precise mechanics to
+						beat
+						the
+						world
+						record which is 1:18s.<br />
+						Feel free to browse the website or contact us for more information.
+					</span>
+				</p>
+			</div>
+			<p class="read-more"><a href="javascript:void(0)" id="btn-read-more" class="button"><span class="icon fa-chevron-down"></span><span id="txt-read-more">Read More...</span></a></p>
 		</div>
+
+		{% include 3dModel.html %}
 	</div>
 </section>
 
