@@ -58,39 +58,39 @@ layout: landing
 			setVideo("en");
 		}
 
-	var $el, $ps, $up, totalHeight;
+		var $el, $ps, $up, totalHeight;
 
-	$("#btn-read-more").click(function () {
+		$("#btn-read-more").click(function () {
 
-		totalHeight = 0
+			totalHeight = 0
 
-		$el = $(this);
-		$p = $el.parent();
-		$up = $p.parent();
-		$ps = $up.find("p:not('.read-more')");
+			$el = $(this);
+			$p = $el.parent();
+			$up = $p.parent();
+			$ps = $up.find("p:not('.read-more')");
 
-		// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-		$ps.each(function () {
-			totalHeight += $(this).outerHeight();
-		});
-
-		$up
-			.css({
-				// Set height to prevent instant jumpdown when max height is removed
-				"height": $up.height(),
-				"max-height": 9999
-			})
-			.animate({
-				"height": totalHeight
+			// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+			$ps.each(function () {
+				totalHeight += $(this).outerHeight();
 			});
 
-		// fade out read-more
-		$p.fadeOut();
+			$up
+				.css({
+					// Set height to prevent instant jumpdown when max height is removed
+					"height": $up.height(),
+					"max-height": 9999
+				})
+				.animate({
+					"height": totalHeight
+				});
 
-		// prevent jump-down
-		return false;
+			// fade out read-more
+			$p.fadeOut();
 
-	});
+			// prevent jump-down
+			return false;
+
+		});
 	});
 
 </script>
@@ -99,9 +99,9 @@ layout: landing
 	<div class="wrapper style1" style="padding:20px 0 0 0">
 		<iframe id="ytplayer" type="text/html"
 			style="width: 100vw;height: 56.25vw;max-height: 80vh;max-width: 142vh;margin: auto;background: transparent;"
-			src="https://www.youtube.com/embed/{{ site.id-video-en }}?modestbranding=1&rel=0&autoplay=0"
-			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen><img src="/assets/ballcuber-overview.png" />
+			src="https://www.youtube.com/embed/{{ site.id-video-en }}?modestbranding=1&rel=0&autoplay=0" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><img
+				src="/assets/ballcuber-overview.png" />
 		</iframe>
 		<div style="width:100%;max-width:1000px;margin:auto;padding:5px 0 5px 0;">
 			<ul class="actions fit small">
@@ -202,7 +202,8 @@ layout: landing
 					</span>
 				</p>
 			</div>
-			<p class="read-more"><a href="javascript:void(0)" id="btn-read-more" class="button"><span class="icon fa-chevron-down"></span><span id="txt-read-more">Read More...</span></a></p>
+			<p class="read-more"><a href="javascript:void(0)" id="btn-read-more" class="button"><span
+						class="icon fa-chevron-down"></span><span id="txt-read-more">Read More...</span></a></p>
 		</div>
 
 		{% include 3dModel.html %}
@@ -311,9 +312,26 @@ layout: landing
 				<p>The resolution time is about 3min30s. The limit is due to the slow stepper motors. To be fast, we
 					would like to use industrial brushless motors.</p>
 			</li>
+
+			<li class="icon fa-reddit">
+				<h3>Comment on Reddit</h3>
+				<blockquote class="reddit-card" data-card-created="1588325664"><a
+						href="https://www.reddit.com/r/Cubers/comments/g6k1j5/4x4x4_rubiks_cube_solving_robot/">4x4x4
+						Rubik's Cube solving robot</a> from <a href="http://www.reddit.com/r/Cubers">r/Cubers</a>
+				</blockquote>
+				<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
+			</li>
+			<li class="icon fa-pencil">
+				<h3>Article on Arduino blog</h3>
+				<p style="text-align: center;"><a href="https://blog.arduino.cc/2020/08/24/the-ballcuber-is-a-robotic-device-capable-of-solving-a-4x4x4-rubiks-cube/"
+					target="_blank"><img src="/assets/arduino.svg" style="width: 50%"/></a></p>
+				<p>Rubik’s cubes are traditionally 3x3x3, and have been solved by robotic systems in a variety of
+					different ways. But what about a 4x4x4 variant? Such a device presents expanded solving challenges,
+					which creators Thibault and Florent were able to address with their BallCuber contraption...</p>
+				<p><a href="https://blog.arduino.cc/2020/08/24/the-ballcuber-is-a-robotic-device-capable-of-solving-a-4x4x4-rubiks-cube/"
+						target="_blank">[Read more]</a></p>
+			</li>
 		</ul>
-				<blockquote class="reddit-card" data-card-created="1588325664"><a href="https://www.reddit.com/r/Cubers/comments/g6k1j5/4x4x4_rubiks_cube_solving_robot/">4x4x4 Rubik's Cube solving robot</a> from <a href="http://www.reddit.com/r/Cubers">r/Cubers</a></blockquote>
-<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 	</div>
 </section>
 

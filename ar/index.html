@@ -12,15 +12,15 @@
         <a-scene embedded="" vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" inspector="" keyboard-shortcuts="" screenshot="">
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="ballcuber.gltf"></a-asset-item>
+            <a-asset-item id="animated-asset" src="cube.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type="barcode" value="7" material="" arjs-anchor="" arjs-hit-testing="">
-            <a-box position="0 0.5 0" color="yellow" material="" geometry=""></a-box>
+            <a-box position="-20 -1 10" color="yellow" material="" geometry=""></a-box>
         </a-marker>
 
         <a-marker id="animated-marker" type="barcode" value="6" material="" arjs-anchor="" arjs-hit-testing="">
-            <a-entity animation-mixer="" gltf-model="#animated-asset" scale="2 2 2">
+            <a-entity animation-mixer="" position="-1.5 -2 0" gltf-model="#animated-asset" scale="2 2 2">
             </a-entity>
         </a-marker>
 

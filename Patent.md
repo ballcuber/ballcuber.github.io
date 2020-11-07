@@ -6,6 +6,11 @@ permalink: /patent/
 
 The invention is protected in France under a Patent registered on April 2019.
 
+The invention was published in the official journal of November 2020 (bopi2045 page 35) : 
+
+**[https://www.inpi.fr/sites/default/files/bopis/bopi2045.pdf](https://www.inpi.fr/sites/default/files/bopis/bopi2045.pdf#page=35)**
+
+
 <section>
 				<div class="box alt">
 					<div class="row uniform 50%">
